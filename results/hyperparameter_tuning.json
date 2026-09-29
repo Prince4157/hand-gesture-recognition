@@ -1,0 +1,28 @@
+{
+    "Architecture": {
+        "Convolutional Layers": "3 blocks with increasing filters (32\u219264\u2192128)",
+        "Kernel Size": "3x3 (optimal for small features)",
+        "Pooling": "MaxPooling 2x2 (reduces spatial dimensions)",
+        "Batch Normalization": "After each conv layer (stabilizes training)"
+    },
+    "Regularization": {
+        "Dropout Rates": "0.25, 0.25, 0.4, 0.5, 0.5 (prevents overfitting)",
+        "L2 Regularization": "Not used (dropout sufficient)"
+    },
+    "Optimization": {
+        "Optimizer": "Adam (adaptive learning rate)",
+        "Initial Learning Rate": "0.001",
+        "Learning Rate Schedule": "ReduceLROnPlateau (factor=0.5, patience=5)",
+        "Batch Size": "32 (balance between speed and accuracy)"
+    },
+    "Data Augmentation": {
+        "Rotation": "\u00b120 degrees",
+        "Shift": "\u00b120%",
+        "Zoom": "\u00b120%",
+        "Flip": "Horizontal"
+    },
+    "Early Stopping": {
+        "Monitor": "val_loss",
+        "Patience": "10 epochs"
+    }
+}
