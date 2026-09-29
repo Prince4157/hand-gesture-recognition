@@ -97,24 +97,29 @@ python LiveCameraDemo.py
 ## Project Structure
 
 ```
-.
-├── README.md
-├── HandGesture.py             # Full pipeline on synthetic data (from-scratch CNN)
-├── RealHandGesture.py         # Transfer learning (MobileNetV2) on real dataset
-├── LiveCameraDemo.py          # Simple live webcam demo
-├── test_model.py              # Live webcam demo with prediction smoothing
-├── best_real_model.keras      # Trained MobileNetV2-based model (real data)
-├── evaluation_metrics.json    # Metrics from the synthetic-data model
-├── hyperparameter_tuning.json # Architecture / training hyperparameters used
-├── .gitignore
-└── assets/
-    ├── data_exploration_samples.png
-    ├── data_exploration_distribution.png
-    ├── real_data_samples.png
-    ├── real_data_distribution.png
-    ├── confusion_matrix.png
-    ├── training_history.png
-    └── sample_predictions.png
+└── 📁hand-gesture-recognition-cnn-main
+    └── 📁assets
+        ├── confusion_matrix.png
+        ├── data_exploration_distribution.png
+        ├── data_exploration_samples.png
+        ├── real_data_distribution.png
+        ├── real_data_samples.png
+        ├── sample_predictions.png
+        ├── training_history.png
+    └── 📁demo
+    └── 📁models
+        ├── best_real_model.keras
+    └── 📁notebooks
+    └── 📁results
+        ├── evaluation_metrics.json
+        ├── hyperparameter_tuning.json
+    └── 📁src
+        ├── HandGesture.py
+        ├── LiveCameraDemo.py
+        ├── RealHandGesture.py
+    └── 📁tests
+        ├── test_model.py
+    └── README.md
 ```
 
 > **Note:** the synthetic-data model checkpoints (`best_model.keras`, `hand_gesture_model.keras`, ~100MB each) and the real dataset folder (`rps_dataset/`) are excluded from this repo via `.gitignore` — they're large and fully reproducible by running the scripts below.
